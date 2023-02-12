@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Unbounded', cursive;
+}
+
+li {
+    margin-left: 20px;
+}
+
+html {
+    font-size: 18px;
+    background-color: #cdb4db;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+header {
+    background-color: #a2d2ff;
+    padding: 25px 0;
+    border-bottom: 1px solid #000;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    text-shadow: 3px 3px #fff;
+}
+
+nav {
+    margin: 25px;
+}
+
+nav ul li {
+    background-color: #fff;
+    list-style-type: none;
+    display: inline;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
+    padding: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav ul li:nth-child(n+1) {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+main section, .page {
+    padding: 25px 0;
+}
+
+main section:nth-child(n+2) {
+    border-top: 1px solid #000;
+}
+
+.page article {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page aside {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+.list-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px 0;
+}
+
+.card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.card img, .card h2, .card h3, .card p, .card ul {
+    margin-bottom: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #a300ff;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #ffafcc;
+    padding: 25px 0;
+    border-top: 1px solid #000;
+}
+
+#notification {
+    background-color: #ffb703;
+    padding: 25px 0;
+    border-bottom: 1px solid #000;
+}
+
+.message {
+    width: 90%;
+    float: left;
+}
+
+.btn-close {
+    border: none;
+    background: none;
+    font-size: 1em;
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffb703;
+    margin-bottom: 25px;
+}
+
+.searchbar {
+    margin-top: 25px;
+}
+
+.searchbar input {
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 10px 15px;
+    box-shadow: 3px 3px #000;
+    margin-right: 15px;
+}
+
+.searchbar button {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
+    padding: 10px 10px;
+    font-size: 1em;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+}
+
+.loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin: 100px 0;
+    border: 10px solid #dddddd;
+    border-top-color: #009579;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    nav ul li {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.75em;
+    }
+
+    .page article {
+        float: right;
+        width: 63%;
+    }
+    
+    .page aside {
+        float: left;
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #notification {
+        display: none;
+    }
+}

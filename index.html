@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuFoods</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://kit.fontawesome.com/7d6bff7577.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="notification">
+        <div class="container">
+            <p class="message">Halaman ini sudah rensponsive. <a href="https://github.com/haululazkiyaa/gdscitb-intro-to-fe#readme">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></p>
+            <button class="btn-close" onclick="hideNotification()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <header class="text-center">
+        <div class="container">
+            <h1 class="brand">MenuFoods</h1>
+            <p>Food Menu For All</p>
+        </div>
+        <nav class="text-center">
+            <div class="container">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://github.com/haululazkiyaa/">About</a></li>
+                </ul>
+                <div class="searchbar">
+                    <input type="text" name="s" id="search" placeholder="Search new recipes...">
+                    <button onclick="submitSearch()">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Breakfast Menu</h2>
+                    <p>Find delicious breakfast recipes.</p>
+                </div>
+                <div id="listBreakfast" class="list-menu">
+                    <div>
+                        <div class="loading"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Menu Aneka Mie</h2>
+                    <p>Cari Menu menu aneka masakan mie berikut ini.</p>
+                </div>
+                <div id="listDessert" class="list-menu">
+                    <div>
+                        <div class="loading"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center">
+        <p>Dibuat dengan ❤ di Sumedang</p>
+        <p>API powered by <img src="https://www.themealdb.com/images/logo-small.png" alt="TheMealDB" height="25"></p>
+    </footer>
+    <script>
+        const notification = document.getElementById("notification");
+        
+        function hideNotification() {
+            if (notification.classList == "") {
+                notification.classList.add("hide");
+            } else {
+                notification.classList.remove("hide");
+            };
+        };
+    </script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>

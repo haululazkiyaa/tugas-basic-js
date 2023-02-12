@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mie Aceh Sabang - MenuFoods</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script src="https://kit.fontawesome.com/7d6bff7577.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="notification">
+        <div class="container">
+            <p class="message">Halaman ini sudah rensponsive. <a href="https://github.com/haululazkiyaa/gdscitb-intro-to-fe#readme">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a></p>
+            <button class="btn-close" onclick="hideNotification()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <header class="text-center">
+        <div class="container">
+            <h1 class="brand">MenuFoods</h1>
+            <p>Menu Makanan Untuk Semua</p>
+        </div>
+        <nav class="text-center">
+            <div class="container">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://github.com/haululazkiyaa/">About</a></li>
+                </ul>
+                <div class="searchbar">
+                    <input type="text" name="s" id="search" placeholder="Search new recipes...">
+                    <button onclick="submitSearch()">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="container">
+            <aside id="mealsInfo" class="card">
+                <div>
+                    <div class="loading"></div>
+                </div>
+            </aside>
+            <article id="mealsRecipe" class="card">
+                <div>
+                    <div class="loading"></div>
+                </div>
+            </article>
+            <div class="clear"></div>
+        </div>
+    </main>
+    <footer class="text-center">
+        <p>Dibuat dengan ❤ di Sumedang</p>
+    </footer>
+    <script>
+        const notification = document.getElementById("notification");
+        
+        function hideNotification() {
+            if (notification.classList == "") {
+                notification.classList.add("hide");
+            } else {
+                notification.classList.remove("hide");
+            };
+        };
+    </script>
+    <script src="assets/js/pages.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+
+</html>
